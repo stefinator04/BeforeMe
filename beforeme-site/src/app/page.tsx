@@ -96,7 +96,7 @@ export default function Home(){
 
         <section className="mt-12 border-t border-slate-100 pt-8">
           <h4 className="text-sm font-medium text-slate-700">Contact</h4>
-          <p className="mt-2 text-sm text-slate-600">Stephanie — [email]</p>
+          <p className="mt-2 text-sm text-slate-600">Stephanie — stephanie.sithu@gmail.com</p>
 
           <p className="mt-4 text-xs text-slate-500">BeforeMe is not affiliated with or endorsed by Pinterest.</p>
         </section>
