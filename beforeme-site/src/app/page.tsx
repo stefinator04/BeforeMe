@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Home(): JSX.Element {
+export default function Home(){
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 antialiased">
       <header className="border-b border-slate-100">
