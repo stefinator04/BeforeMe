@@ -1,4 +1,5 @@
-import React from "react";
+import Link from "next/link";
+import {colors} from "../colors";
 
 export default function Home(){
   return (
@@ -7,12 +8,7 @@ export default function Home(){
         <div className="mx-auto max-w-4xl px-6 py-6">
           <div className="flex items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gradient-to-br from-rose-200 via-amber-100 to-sky-100 text-slate-800 shadow-sm">
-                <span className="sr-only">BeforeMe</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                  <path d="M4 12h16M12 4v16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
+              <img src="/logo.gif" alt="BeforeMe" className="h-10 w-10 rounded-md shadow-sm" style={{ background: `linear-gradient(to bottom right, ${colors.accent}33, ${colors.secondary}33, ${colors.primary}33)` }} />
               <div>
                 <h1 className="text-lg font-semibold tracking-tight">BeforeMe</h1>
                 <p className="text-xs text-slate-500">Automates the three-before-me Pinterest workflow</p>
@@ -26,7 +22,7 @@ export default function Home(){
       <main className="mx-auto max-w-4xl px-6 py-16">
         <section className="flex flex-col gap-8 md:flex-row md:items-center md:gap-12">
           <div className="max-w-xl">
-            <p className="text-sm font-medium text-emerald-600">For Etsy sellers</p>
+            <p className="text-sm font-medium" style={{ color: colors.primary }}>For Etsy sellers</p>
             <h2 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-slate-900">
               Grow your Etsy shop on Pinterest
               <span className="block text-rose-600">
@@ -34,7 +30,7 @@ export default function Home(){
               </span>
             </h2>
             <p className="mt-4 text-slate-600">
-              Pinterest drives consistent traffic to Etsy shops, but only if you follow the "three-before-me" strategy: curate three pins from other creators before pinning your own products. BeforeMe automates this workflow so you can stay consistent without the friction. Focus on creating great products—we'll handle the Pinterest cadence.
+              Pinterest drives consistent traffic to Etsy shops, but only if you follow the &quot;three-before-me&quot; strategy: curate three pins from other creators before pinning your own products. BeforeMe automates this workflow so you can stay consistent without the friction. Focus on creating great products—we&apos;ll handle the Pinterest cadence.
             </p>
 
             <div className="mt-6 flex flex-col gap-3">
@@ -57,21 +53,21 @@ export default function Home(){
 
         </section>
 
-        <section className="-mx-6 mt-16 bg-emerald-50 px-6 py-12">
+        <section className="-mx-6 mt-16 px-6 py-12" style={{ backgroundColor: colors.primary + '0d' }}>
           <div className="mx-auto max-w-4xl">
             <h3 className="text-lg font-semibold text-slate-900">Built for how Etsy sellers actually work</h3>
-            <p className="mt-2 text-slate-600">We know you're juggling content creation, shop management, and marketing. BeforeMe removes one friction point: the daily Pinterest discipline. The result is compound growth—your pins work harder for your shop while you focus on what matters.</p>
+            <p className="mt-2 text-slate-600">We know you&apos;re juggling content creation, shop management, and marketing. BeforeMe removes one friction point: the daily Pinterest discipline. The result is compound growth—your pins work harder for your shop while you focus on what matters.</p>
             
             <div className="mt-6 grid gap-4 md:grid-cols-3">
-              <div className="rounded-lg bg-white p-4 shadow-sm border border-emerald-100">
+              <div className="rounded-lg bg-white p-4 shadow-sm" style={{ border: `1px solid ${colors.primary}33` }}>
                 <h4 className="font-semibold text-slate-900">Consistency = Traffic</h4>
                 <p className="mt-2 text-sm text-slate-600">Pinterest rewards accounts that pin regularly. We make it effortless.</p>
               </div>
-              <div className="rounded-lg bg-white p-4 shadow-sm border border-emerald-100">
+              <div className="rounded-lg bg-white p-4 shadow-sm" style={{ border: `1px solid ${colors.primary}33` }}>
                 <h4 className="font-semibold text-slate-900">Strategy you know</h4>
-                <p className="mt-2 text-sm text-slate-600">Three-before-me isn't a buzzword—it's the proven way to grow on Pinterest.</p>
+                <p className="mt-2 text-sm text-slate-600">Three-before-me isn&apos;t a buzzword—it&apos;s the proven way to grow on Pinterest.</p>
               </div>
-              <div className="rounded-lg bg-white p-4 shadow-sm border border-emerald-100">
+              <div className="rounded-lg bg-white p-4 shadow-sm" style={{ border: `1px solid ${colors.primary}33` }}>
                 <h4 className="font-semibold text-slate-900">Full transparency</h4>
                 <p className="mt-2 text-sm text-slate-600">You control everything. No algorithm surprises, no hidden pins.</p>
               </div>
@@ -103,7 +99,10 @@ export default function Home(){
       </main>
 
       <footer className="border-t border-slate-100">
-        <div className="mx-auto max-w-4xl px-6 py-6 text-sm text-slate-500">© {new Date().getFullYear()} BeforeMe — Sandbox student project</div>
+        <div className="mx-auto max-w-4xl px-6 py-6 flex items-center justify-between text-sm text-slate-500">
+          <div>© {new Date().getFullYear()} BeforeMe — Sandbox student project</div>
+          <Link href="/privacypolicy" className="hover:text-slate-700">Privacy Policy</Link>
+        </div>
       </footer>
     </div>
   );
